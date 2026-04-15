@@ -1,91 +1,87 @@
-vCard - Personal Portfolio
+Rohlat Mattini - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Rohlat Mattini
+Rohlat Mattini
+Software Engineer
 
 Show Contacts
 
 Email
-richard@example.com
+rohlatmattini@gmail.com
 
 Phone
-+1 (213) 352-2795
++963 934 626 709
 
 Birthday
-June 23, 1982
+September 02, 2003
 
 Location
-Sacramento, California, USA
+Damascus, Syria
 
 # navbar
 
 About
 Resume
 Portfolio
-Blog
-Contact
 
 # about
 
 About me
 
-I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+I'm a dedicated Software Engineer and Flutter Developer from Damascus, Syria, with a passion for building high-performance, cross-platform applications. I enjoy turning complex business requirements into simple, beautiful, and intuitive solutions.
 
-My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
-
+My goal is to build your application so that it is functional and user-friendly but at the same time attractive and scalable. Moreover, I add personal touch to every product and make sure it is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I have successfully delivered multiple projects for various clients.
 
 ## service
 
 What i'm doing
 
-alt = design icon
-Web design
-The most modern and high-quality design made at a professional level.
+alt = mobile app icon
+Mobile Development
+Professional development of high-performance applications for iOS and Android using Flutter. I have successfully completed 6 mobile projects with a focus on GetX and Clean Architecture.
 
 alt = Web development icon
 Web development
-High-quality development of sites at the professional level.
+Building responsive and fast web applications using Flutter Web and modern technologies. Completed 2 web projects ensuring cross-browser compatibility and smooth performance.
 
-alt = mobile app icon
-Mobile apps
-Professional development of applications for iOS and Android.
+alt = design icon
+Software Engineering
+Applying core engineering principles to solve complex problems, ensuring code scalability, maintenance, and implementing clean architecture in every project.
 
-alt = camera icon
-Photography
-I make high-quality photos of any category at a professional level.
-
+alt = UI/UX icon
+UI/UX Implementation
+Converting beautiful designs into functional reality, focusing on intuitive navigation and pixel-perfect layouts to provide the best user experience.
 
 ## testimonials
 
 Testimonials
 
-alt = Daniel lewis
-Daniel lewis
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+alt = Client 1
+Ahmed Hassan
+Rohlat was hired to develop our mobile application. We were extremely pleased with the work done. He has excellent technical skills and truly cares about the client's needs. The app was delivered on time and exceeded our expectations.
 
-alt = Jessica miller
-Jessica miller
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+alt = Client 2
+Sara Khalil
+Rohlat developed a complete dashboard system for our real estate business. His attention to detail and commitment to clean code made the project a huge success. I highly recommend him for any Flutter development work.
 
-alt = Emily evans
-Emily evans
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+alt = Client 3
+Mohammed Nasser
+Working with Rohlat was a great experience. He transformed our complex requirements into a seamless, user-friendly application. His problem-solving skills and professionalism are outstanding.
 
-alt = Henry william
-Henry william
-Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-
+alt = Client 4
+Layla Mahmoud
+Rohlat created our event management system and we couldn't be happier. The app is fast, beautiful, and exactly what we needed. He provided excellent communication throughout the entire process.
 
 ## clients
 
 Clients
 
-alt = client logo
-
-
+alt = Darmesk Company
+alt = Musafer
+alt = Real Estate Platform
+alt = Banking System
 
 # resume
 
@@ -93,145 +89,96 @@ Resume
 
 Education
 
-University school of the arts
-2007 — 2008
-Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+Damascus University
+2021 — 2026
+Bachelor's degree in Information Technology. Focused on software engineering principles, mobile application development, and clean architecture patterns.
 
-New york academy of art
-2006 — 2007
-Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..
+Scientific Baccalaureate
+2020 — 2021
+Ministry of Education, Syria. Graduated with honors in the scientific stream.
 
-High school of art and design
-2002 — 2004
-Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.
+Experience & Projects
 
-Experience
+Musafer - Bus Transport Management System
+2026
+Graduation project: A comprehensive transport platform for booking and managing bus trips. Developed in Flutter with Clean Architecture, featuring real-time tracking, seat selection, digital ticketing, and online payment integration.
 
-Creative director
-2015 — Present
-Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur.
+Online Complaint Management System
+2025
+Cross-platform mobile app for citizen complaint submission and tracking. Features real-time notifications, file attachments, and interactive communication between citizens and administrators.
 
-Art director
-2013 — 2015
-Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+Banking & Money Transfer System
+2025
+Dual-platform system with Flutter mobile app and web dashboard. Focused on transaction security, beneficiary management, and rigorous software engineering standards.
 
-Web designer
-2010 — 2013
-Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+Real Estate & Car Rental System
+2025
+Flutter application with role-based access for renters and owners. Integrated with Laravel backend via RESTful APIs, featuring advanced filtering and booking management.
+
+Event Management System
+2024
+Mobile app for organizing private and public events. Allows venue booking, service selection (catering, decorations), and ticket purchasing through an integrated system.
+
+Flutter Developer Intern - Darmesk Company
+05/2024 — 10/2024
+Hands-on experience in mobile app development using Flutter framework, focusing on UI/UX implementation, state management with GetX, and RESTful API integration.
 
 My skills
 
-Web design
-80%
-Graphic design
-70%
-Branding
+Flutter & Dart Development
+95%
+
+State Management (GetX)
 90%
-WordPress
-50%
 
+Clean Architecture
+85%
 
+Backend Integration (Firebase / REST API)
+85%
 
 # portfolio
 
 Portfolio
 
 All
-Web design
 Applications
 Web development
 
 Select category
 All
-Web design
 Applications
 Web development
 
-alt = finance
-Finance
-Web development
-
-alt = orizon
-Orizon
-Web development
-
-alt = fundo
-Fundo
-Web design
-
-alt = brawlhalla
-Brawlhalla
+alt = Event Management System
+Event Management System
 Applications
 
-alt = dsm.
-DSM.
-Web design
-
-alt = metaspark
-MetaSpark
-Web design
-
-alt = summary
-Summary
-Web development
-
-alt = task manager
-Task Manager
+alt = Real Estate & Car Rental System
+Real Estate & Car Rental System
 Applications
 
-alt = arrival
-Arrival
+alt = Complaint Management System
+Complaint Management System
+Applications
+
+alt = Banking Transfer System
+Banking Transfer System
+Applications
+
+alt = Bus Transport Management System
+Bus Transport Management System
+Applications
+
+alt = Banking System Dashboard
+Banking System Dashboard
+Web development
+
+alt = Real Estate Management Dashboard
+Real Estate Management Dashboard
 Web development
 
 
-
-# blog
-
-Blog
-
-alt = Design conferences in 2022
-Design
-Fab 23, 2022
-Design conferences in 2022
-Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-
-alt = Best fonts every designer
-Design
-Fab 23, 2022
-Best fonts every designer
-Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-
-alt = Design digest #80
-Design
-Fab 23, 2022
-Design digest #80
-Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-
-alt = UI interactions of the week
-Design
-Fab 23, 2022
-UI interactions of the week
-Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-
-alt = The forgotten art of spacing
-Design
-Fab 23, 2022
-The Forgotten Art Of Spacing
-Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-alt = Design digest #79
-Design
-Fab 23, 2022
-Design Digest #79
-Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-
-
-
-# contact
-
-Contact
-
-Contact Form
 
 Full name
 Email address
