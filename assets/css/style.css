@@ -2,15 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -1223,8 +1214,193 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+/*-----------------------------------*\
+  #PROJECT DETAILS MODAL
+\*-----------------------------------*/
 
+.project-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
 
+.project-details-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.project-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 0%, 5%);
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.project-modal-content {
+  position: relative;
+  background: var(--eerie-black-2);
+  width: 90%;
+  max-width: 1100px;
+  max-height: 90vh;
+  padding: 25px 25px 30px;
+  border-radius: 20px;
+  border: 1px solid var(--jet);
+  box-shadow: var(--shadow-5);
+  overflow-y: auto;
+  z-index: 2;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* تخصيص شريط التمرير داخل النافذة */
+.project-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-modal-content::-webkit-scrollbar-track {
+  background: var(--onyx);
+  border-radius: 10px;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 10px;
+}
+
+.project-details-modal.active .project-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.project-modal-content .modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--onyx);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 22px;
+  opacity: 0.7;
+  transition: var(--transition-1);
+  z-index: 3;
+}
+
+.project-modal-content .modal-close-btn:hover {
+  opacity: 1;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+}
+
+.project-info-wrapper {
+  padding: 5px 5px 0;
+}
+
+.project-info-wrapper .modal-title {
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: var(--fw-600);
+  padding-right: 40px; /* مساحة لزر الإغلاق */
+}
+
+.project-desc {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--jet);
+}
+
+/* ===== معرض الصور - النسخة المحسنة جداً ===== */
+.project-screenshots {
+    display: flex;
+    flex-direction: row; /* جنب بعض أفقياً */
+    flex-wrap: wrap; /* إذا ضاقت الشاشة تنزل للصف التالي */
+    gap: 20px;
+    justify-content: center; /* توسيط المجموعة */
+    align-items: flex-start; /* محاذاة للأعلى */
+    margin-top: 20px;
+}
+
+.project-screenshots img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* الارتفاع تلقائي حسب الصورة */
+    border-radius: 16px;
+    border: 1px solid var(--jet);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent; /* إزالة الخلفية الداكنة */
+    display: block;
+}
+
+/* تأثير التحويم */
+.project-screenshots img:hover {
+    transform: scale(1.02);
+    border-color: var(--orange-yellow-crayola);
+}
+
+/* للشاشات المتوسطة */
+@media (min-width: 768px) {
+    .project-screenshots img {
+        width: auto;
+        max-width: 90%;
+    }
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .project-screenshots {
+        gap: 30px;
+    }
+    
+    .project-screenshots img {
+        max-width: 85%;
+    }
+}
+
+/* إذا كان هناك صورة واحدة فقط */
+.project-screenshots:has(img:only-child) {
+    align-items: center;
+}
+
+.project-screenshots img:only-child {
+    max-width: 70%;
+}
+
+/* رسالة "لا توجد صور" */
+.project-screenshots .no-images-msg {
+    color: var(--light-gray);
+    text-align: center;
+    width: 100%;
+    padding: 40px 20px;
+    font-size: var(--fs-5);
+    background: var(--eerie-black-1);
+    border-radius: 16px;
+    border: 1px dashed var(--jet);
+}
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1626,6 +1802,21 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
+  /* project modal responsive */
+  
+  .project-modal-content {
+    padding: 25px;
+    width: 95%;
+  }
+  
+  .project-screenshots {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-screenshots img {
+    height: 180px;
+  }
+
 
 
   /**
@@ -1745,6 +1936,12 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
+
+  /* project modal responsive */
+  
+  .project-screenshots {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 
 

@@ -144,16 +144,146 @@ const pages = document.querySelectorAll("[data-page]");
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    for (let j = 0; j < pages.length; j++) {
+      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+        pages[j].classList.add("active");
+        navigationLinks[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
     }
 
   });
+}
+
+
+
+// =============================================
+// نافذة تفاصيل المشروع المنبثقة
+// =============================================
+
+// Project Modal Variables
+const projectItems = document.querySelectorAll(".project-item");
+const projectModal = document.querySelector("[data-project-modal]");
+const projectCloseBtn = document.querySelector("[data-project-close-btn]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+
+const projectTitle = document.querySelector("[data-project-title]");
+const projectDesc = document.querySelector("[data-project-desc]");
+const projectScreenshots = document.querySelector("[data-project-screenshots]");
+
+// دالة فتح وإغلاق النافذة المنبثقة
+const toggleProjectModal = () => {
+  if (projectModal) {
+    projectModal.classList.toggle("active");
+    // منع التمرير في الخلفية عند فتح النافذة
+    document.body.style.overflow = projectModal.classList.contains("active") ? "hidden" : "";
+  }
+};
+
+// دالة إغلاق النافذة المنبثقة
+const closeModal = () => {
+  if (projectModal) {
+    projectModal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+};
+
+// إضافة حدث النقر لكل مشروع
+if (projectItems.length > 0) {
+  projectItems.forEach(item => {
+    item.addEventListener("click", function(e) {
+      // منع التنقل إذا كان هناك رابط
+      const anchor = this.querySelector('a');
+      if (anchor && anchor.getAttribute('href') !== 'javascript:void(0)') {
+        return;
+      }
+      
+      // جلب بيانات المشروع من الخصائص المخصصة
+      const name = this.getAttribute("data-project-name");
+      const description = this.getAttribute("data-project-description");
+      const imagesAttr = this.getAttribute("data-project-images");
+
+      if (name && description) {
+        // تعيين العنوان والوصف
+        projectTitle.textContent = name;
+        projectDesc.textContent = description;
+        
+        // مسح وإعادة ملء معرض الصور
+        projectScreenshots.innerHTML = "";
+        
+        if (imagesAttr && imagesAttr.trim() !== "") {
+          // تقسيم قائمة الصور وإزالة المسافات الزائدة
+          const images = imagesAttr.split(",").map(src => src.trim());
+          
+          images.forEach(src => {
+            if (src) {
+              const img = document.createElement("img");
+              img.src = src;
+              img.alt = `${name} - لقطة شاشة`;
+              img.loading = "lazy";
+              
+              // إضافة حدث النقر لعرض الصورة بالحجم الكامل
+              img.addEventListener("click", (e) => {
+                e.stopPropagation();
+                window.open(src, '_blank');
+              });
+              
+              projectScreenshots.appendChild(img);
+            }
+          });
+        } else {
+          // إذا لم تكن هناك صور محددة، استخدم الصورة الرئيسية للمشروع
+          const mainImg = this.querySelector('.project-img img');
+          if (mainImg) {
+            const img = document.createElement("img");
+            img.src = mainImg.src;
+            img.alt = `${name} - الصورة الرئيسية`;
+            img.addEventListener("click", (e) => {
+              e.stopPropagation();
+              window.open(mainImg.src, '_blank');
+            });
+            projectScreenshots.appendChild(img);
+          } else {
+            // رسالة في حال عدم وجود صور
+            const noImagesMsg = document.createElement("p");
+            noImagesMsg.textContent = "لا توجد صور متاحة لهذا المشروع حالياً.";
+            noImagesMsg.style.color = "var(--light-gray)";
+            noImagesMsg.style.textAlign = "center";
+            noImagesMsg.style.gridColumn = "1 / -1";
+            noImagesMsg.style.padding = "20px";
+            projectScreenshots.appendChild(noImagesMsg);
+          }
+        }
+        
+        // فتح النافذة المنبثقة
+        toggleProjectModal();
+      }
+    });
+  });
+}
+
+// إغلاق النافذة المنبثقة عند النقر على زر الإغلاق
+if (projectCloseBtn) {
+  projectCloseBtn.addEventListener("click", closeModal);
+}
+
+// إغلاق النافذة المنبثقة عند النقر على الخلفية
+if (projectOverlay) {
+  projectOverlay.addEventListener("click", closeModal);
+}
+
+// إغلاق النافذة المنبثقة عند الضغط على مفتاح Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && projectModal && projectModal.classList.contains("active")) {
+    closeModal();
+  }
+});
+
+// منع إغلاق النافذة عند النقر على محتوى النافذة نفسها
+const modalContent = document.querySelector(".project-modal-content");
+if (modalContent) {
+  modalContent.addEventListener("click", (e) => e.stopPropagation());
 }
